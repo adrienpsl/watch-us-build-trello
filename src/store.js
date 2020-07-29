@@ -11,11 +11,11 @@ export default new Vuex.Store( {
   state    : { board },
   mutations: {},
   getters  : {
-    getTask: state => {
-      return ( id ) => {
+    getTask( state ) {
+      return id => {
         for ( const column of state.board.columns ) {
           for ( const task of column.tasks ) {
-            console.log( id, task.id );
+            console.log( task.id, task.name, id );
             if ( task.id === id ) {
               console.log( task );
               return task;

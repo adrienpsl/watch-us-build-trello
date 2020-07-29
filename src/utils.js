@@ -7,7 +7,6 @@ export function uuid() {
 export function saveStatePlugin( store ) {
   store.subscribe(
     ( mutation, state ) => {
-      console.log( 'toto' );
       localStorage.setItem( 'board', JSON.stringify( state.board ) );
     }
   );
